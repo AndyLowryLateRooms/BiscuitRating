@@ -11,13 +11,6 @@ namespace BiscuitRating
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-1.*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/jssor").Include(
-                        "~/Scripts/jssor/jssor.core.js",
-                        "~/Scripts/jssor/jssor.utils.js",
-                        "~/Scripts/jssor/jssor.slider.js"
-                        
-                        ));
-
             bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
                         "~/Scripts/jquery-ui*"));
 
