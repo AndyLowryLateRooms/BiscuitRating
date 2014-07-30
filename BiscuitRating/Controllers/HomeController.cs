@@ -22,6 +22,7 @@ namespace BiscuitRating.Controllers
                 .FetchHotel(hotelId);
 
             ViewBag.Message = "How are the biscuits at " + hotelDetails.Name + "?";
+            ViewBag.Hotel = hotelDetails;
 
             return View();
         }
