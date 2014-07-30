@@ -25,7 +25,14 @@ namespace BiscuitRating.Apis
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             var response = await client.GetAsync(hotelId.ToString(CultureInfo.InvariantCulture));
 
+            return await DecodeResponse(hotelId, response);
+        }
+
+        private async Task<HotelDetails> DecodeResponse(int hotelId, HttpResponseMessage response)
+        {
             dynamic result = await response.Content.ReadAsAsync<object>();
+
+            Trace(result.ToString());
 
             return new HotelDetails()
             {
@@ -33,6 +40,11 @@ namespace BiscuitRating.Apis
                 Name = result.name,
                 PhotoUrl = result.images.gallery[0].url
             };
+        }
+
+        private void Trace(string str)
+        {
+            System.Diagnostics.Trace.WriteLine(str, "HotelDetailRepo");
         }
     }
 }
