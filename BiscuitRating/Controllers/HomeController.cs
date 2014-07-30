@@ -10,11 +10,25 @@ namespace BiscuitRating.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            ViewBag.Message = "Where are you staying?";
+            try
+            {
+                System.Diagnostics.Trace.WriteLine("Index");
 
-            return View();
+                //var hotelDetails = await new NearestHotelsRepository()
+                //    .FetchNearestHotel(hotelId);
+
+                ViewBag.Message = "Where are you staying?";
+                //ViewBag.Hotel = hotelDetails;
+
+                return View();
+            }
+            catch (Exception exception)
+            {
+                System.Diagnostics.Trace.WriteLine(exception);
+                throw;
+            }
         }
 
         public async Task<ActionResult> SelectHotel(int hotelId)
