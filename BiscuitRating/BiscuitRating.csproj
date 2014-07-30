@@ -155,6 +155,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\biscuits\1ChocolateDigestive.jpg" />
+    <Content Include="Content\biscuits\2Cookie.jpg" />
+    <Content Include="Content\biscuits\3JammyBiscuit.jpg" />
+    <Content Include="Content\biscuits\4Shortbread.jpg" />
+    <Content Include="Content\biscuits\5Bourbon.jpg" />
+    <Content Include="Content\biscuits\6FigRoll.jpg" />
+    <Content Include="Content\biscuits\7PinkWafer.jpg" />
     <Content Include="Content\images\ajax-loader.gif" />
     <Content Include="Content\images\icons-18-black.png" />
     <Content Include="Content\images\icons-18-white.png" />
