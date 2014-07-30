@@ -18,6 +18,8 @@ namespace BiscuitRating.Controllers
 
         public async Task<ActionResult> SelectHotel(int hotelId)
         {
+            System.Diagnostics.Trace.WriteLine("SelectHotel" + hotelId);
+
             var hotelDetails = await new HotelDetailsRepository()
                 .FetchHotel(hotelId);
 
