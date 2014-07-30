@@ -7,27 +7,19 @@ using System.Net;
 
 namespace BiscuitRating.Apis
 {
-    public class HotelDetails
+    public class NearestHotelRepository
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string PhotoUrl { get; set; }
-    }
-
-    public class HotelDetailsRepository
-    {
-        public async Task<HotelDetails> FetchHotel(int hotelId)
+        public async Task<HotelDetails> FetchHotel(double latitude, double longitude)
         {
             var client = new HttpClient();
             client.DefaultRequestHeaders.Add("TLRG-AppId", "257B8C35-CD18-4A58-92AC-13EC6FBF78A3");
-            client.BaseAddress = new Uri("http://api.laterooms.com/hotel/");
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            var response = await client.GetAsync(hotelId.ToString(CultureInfo.InvariantCulture));
+            var response = await client.GetAsync("http://api.laterooms.com/search/location/" + latitude.ToString(CultureInfo.InvariantCulture) + "," + longitude.ToString(CultureInfo.InvariantCulture) + "/");
 
-            return await DecodeResponse(hotelId, response);
+            return await DecodeResponse(response);
         }
 
-        private async Task<HotelDetails> DecodeResponse(int hotelId, HttpResponseMessage response)
+        private async Task<HotelDetails> DecodeResponse(HttpResponseMessage response)
         {
             dynamic result = await response.Content.ReadAsAsync<object>();
 
@@ -35,9 +27,9 @@ namespace BiscuitRating.Apis
 
             return new HotelDetails()
             {
-                Id = hotelId,
-                Name = result.name,
-                PhotoUrl = result.images.gallery[0].url
+                Id = result.results[0].id,
+                Name = result.results[0].name,
+                PhotoUrl = result.results[0].img
             };
         }
 
