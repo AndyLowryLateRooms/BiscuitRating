@@ -156,6 +156,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\RatingsDB.mdf" />
+    <Content Include="App_Data\RatingsDB_log.ldf">
+      <DependentUpon>RatingsDB.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\biscuits\1.jpg" />
     <Content Include="Content\biscuits\1ChocolateDigestive.jpg" />
     <Content Include="Content\biscuits\2.jpg" />
@@ -275,9 +279,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
