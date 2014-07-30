@@ -27,6 +27,9 @@ namespace BiscuitRating.Apis
 
             dynamic result = await response.Content.ReadAsAsync<object>();
 
+
+            System.Diagnostics.Trace.WriteLine(result.ToString());
+
             return new HotelDetails()
             {
                 Id = hotelId,
