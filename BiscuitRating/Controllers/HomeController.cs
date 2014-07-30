@@ -9,9 +9,13 @@ namespace BiscuitRating.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
+            var hotelDetails = await new NearestHotelRepository()
+                .FetchHotel(53.31542, -2.08738);
+
             ViewBag.Message = "Where are you staying?";
+            ViewBag.Hotel = hotelDetails;
 
             return View();
         }
