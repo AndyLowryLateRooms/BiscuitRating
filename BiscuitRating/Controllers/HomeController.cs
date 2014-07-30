@@ -1,8 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using BiscuitRating.Apis;
 
 namespace BiscuitRating.Controllers
 {
@@ -15,11 +16,12 @@ namespace BiscuitRating.Controllers
             return View();
         }
 
-        public ActionResult SelectHotel(int hotelId)
+        public async Task<ActionResult> SelectHotel(int hotelId)
         {
-            ViewBag.Message = "How are the biscuits at " + hotelId + "?";
+            var hotelDetails = await new HotelDetailsRepository()
+                .FetchHotel(hotelId);
 
-
+            ViewBag.Message = "How are the biscuits at " + hotelDetails.Name + "?";
 
             return View();
         }
