@@ -15,9 +15,11 @@ namespace BiscuitRating.Controllers
             return View();
         }
 
-        public ActionResult SelectHotel()
+        public ActionResult SelectHotel(int hotelId)
         {
-            ViewBag.Message = "How are the biscuits?";
+            ViewBag.Message = "How are the biscuits at " + hotelId + "?";
+
+
 
             return View();
         }
