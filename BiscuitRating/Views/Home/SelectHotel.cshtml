@@ -5,65 +5,10 @@
 
 <h2>@ViewBag.Message </h2>
 
-<br />
-
-<!--
-
-
-
-
- -->
-
-<table>
-    <tr>
-        <td style ="width:200px;height:200px">      
-            <img src="~/Content/biscuits/1ChocolateDigestive.jpg" width ="200" height ="200"/>
-        </td>   
-         <td style ="width:200px;height:200px">
-           <img src="~/Content/biscuits/2Cookie.jpg" width ="200" height ="200"/>
-        </td>
-         <td style ="width:200px;height:200px">
-           <img src="~/Content/biscuits/3JammyBiscuit.jpg" width ="200" height ="200" />
-        </td> 
-         <td style ="width:200px;height:200px">
-           <img src="~/Content/biscuits/4Shortbread.jpg" width ="200" height ="200"/>
-        </td> 
-         <td style ="width:200px;height:200px">
-        <img src="~/Content/biscuits/5Bourbon.jpg" width ="200" height ="200"/>
-        </td> 
-         <td style ="width:200px;height:200px">
-          <img src="~/Content/biscuits/6FigRoll.jpg" width ="200" height ="200" />
-        </td> 
-         <td style ="width:200px;height:200px">
-           <img src="~/Content/biscuits/7PinkWafer.jpg" width ="200" height ="200"/>
-        </td>  
-        </tr>
-    <tr>    
-    
-        <td style ="width:200px;height:200px">        
-             @Html.ActionLink("ChoclateDigestive", "RateHotel", new {Rating =1, HotelId = @ViewBag.Hotel.Id})        
-        </td>      
-       <td style ="width:200px;height:200px">           
-             @Html.ActionLink("Cookie", "RateHotel", new {Rating =2, HotelId = ViewBag.Hotel.Id})        
-        </td>
-            <td style ="width:200px;height:200px">           
-             @Html.ActionLink("JammyBiscuit", "RateHotel", new {Rating =3, HotelId = ViewBag.Hotel.Id})        
-        </td>
-            <td style ="width:200px;height:200px">           
-             @Html.ActionLink("ShortBread", "RateHotel", new {Rating =4, HotelId = ViewBag.Hotel.Id})        
-        </td>
-            <td style ="width:200px;height:200px">           
-             @Html.ActionLink("Bourbon", "RateHotel", new {Rating =5, HotelId = ViewBag.Hotel.Id})        
-        </td>
-            <td style ="width:200px;height:200px">           
-             @Html.ActionLink("FigRoll", "RateHotel", new {Rating =6, HotelId = ViewBag.Hotel.Id})        
-        </td>
-        </td>
-            <td style ="width:200px;height:200px">           
-             @Html.ActionLink("PinkWater", "RateHotel", new {Rating =7, HotelId = ViewBag.Hotel.Id})        
-        </td>
-    </tr>
-   
-</table>
-
-@Html.ActionLink("3 Biscuits", "RateHotel")
+@Html.ActionLink("ChocolateDigestive", "RateHotel", new {Rating="1", HotelId=@ViewBag.Hotel.Id }, new { @class = "digestive" })
+@Html.ActionLink("Cookie", "RateHotel", new {Rating="2", HotelId=@ViewBag.Hotel.Id }, new { @class = "cookie" })
+@Html.ActionLink("JammyBiscuit", "RateHotel", new {Rating="3", HotelId=@ViewBag.Hotel.Id }, new { @class = "jammyBiscuit" })
+@Html.ActionLink("Shortbread", "RateHotel", new {Rating="4", HotelId=@ViewBag.Hotel.Id }, new { @class = "shortbread" })
+@Html.ActionLink("Bourbon", "RateHotel", new {Rating="5", HotelId=@ViewBag.Hotel.Id }, new { @class = "bourbon" })
+@Html.ActionLink("FigRoll", "RateHotel", new {Rating="6", HotelId=@ViewBag.Hotel.Id }, new { @class = "figRoll" })
+@Html.ActionLink("PinkWafer", "RateHotel", new {Rating="7", HotelId=@ViewBag.Hotel.Id }, new { @class = "pinkWafer" })

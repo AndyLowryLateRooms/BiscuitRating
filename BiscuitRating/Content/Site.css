@@ -42,3 +42,73 @@
 .ui-btn-active  {
     text-shadow: none;
 }
+
+.digestive
+{
+    background: url(/Content/biscuits/1ChocolateDigestive.jpg);
+    background-size: 200px 200px;
+    display: block;
+    width: 200px;
+    height: 200px;
+    text-indent: -9999px;
+}
+
+.cookie
+{
+    background: url(/Content/biscuits/2Cookie.jpg);
+    background-size: 200px 200px;
+    display: block;
+    width: 200px;
+    height: 200px;
+    text-indent: -9999px;
+}
+
+.jammyBiscuit
+{
+    background: url(/Content/biscuits/3JammyBiscuit.jpg);
+    background-size: 200px 200px;
+    display: block;
+    width: 200px;
+    height: 200px;
+    text-indent: -9999px;
+}
+
+.shortbread
+{
+    background: url(/Content/biscuits/4Shortbread.jpg);
+    background-size: 200px 200px;
+    display: block;
+    width: 200px;
+    height: 200px;
+    text-indent: -9999px;
+}
+
+.bourbon
+{
+    background: url(/Content/biscuits/5Bourbon.jpg);
+    background-size: 200px 200px;
+    display: block;
+    width: 200px;
+    height: 200px;
+    text-indent: -9999px;
+}
+
+.figRoll
+{
+    background: url(/Content/biscuits/6FigRoll.jpg);
+    background-size: 200px 200px;
+    display: block;
+    width: 200px;
+    height: 200px;
+    text-indent: -9999px;
+}
+
+.pinkWafer
+{
+    background: url(/Content/biscuits/7PinkWafer.jpg);
+    background-size: 200px 200px;
+    display: block;
+    width: 200px;
+    height: 200px;
+    text-indent: -9999px;
+}
