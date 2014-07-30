@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -18,15 +19,23 @@ namespace BiscuitRating.Controllers
 
         public async Task<ActionResult> SelectHotel(int hotelId)
         {
-            System.Diagnostics.Trace.WriteLine("SelectHotel" + hotelId);
+            try
+            {
+                System.Diagnostics.Trace.WriteLine("SelectHotel" + hotelId);
 
-            var hotelDetails = await new HotelDetailsRepository()
-                .FetchHotel(hotelId);
+                var hotelDetails = await new HotelDetailsRepository()
+                    .FetchHotel(hotelId);
 
-            ViewBag.Message = "How are the biscuits at " + hotelDetails.Name + "?";
-            ViewBag.Hotel = hotelDetails;
+                ViewBag.Message = "How are the biscuits at " + hotelDetails.Name + "?";
+                ViewBag.Hotel = hotelDetails;
 
-            return View();
+                return View();
+            }
+            catch (Exception exception)
+            {
+                System.Diagnostics.Trace.WriteLine(exception);
+                throw;
+            }
         }
 
         public async Task<ActionResult> RateHotel(int hotelId, int rating)
