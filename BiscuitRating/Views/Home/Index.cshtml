@@ -1,8 +1,11 @@
 ﻿@{
     ViewBag.Title = "Rate your Hotel";
-    string hotelName = "Hotel " + ViewBag.Hotel.Name;
 }
 
 <h2>@ViewBag.Message</h2>
 
-@Html.ActionLink(hotelName, "SelectHotel", new { hotelId = ViewBag.Hotel.Id })
+@foreach (var hotel in ViewBag.Hotels)
+{
+    string hotelName = hotel.Name;
+    <div>@Html.ActionLink(hotelName, "SelectHotel", new {hotelId = hotel.Id})</div>
+}

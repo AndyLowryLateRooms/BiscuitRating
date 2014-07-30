@@ -12,11 +12,11 @@ namespace BiscuitRating.Controllers
     {
         public async Task<ActionResult> Index()
         {
-            var hotelDetails = await new NearestHotelRepository()
-                .FetchHotel(53.31542, -2.08738);
+            var hotels = await new NearestHotelRepository()
+                .FetchHotels(53.489931, -2.240374);
 
             ViewBag.Message = "Where are you staying?";
-            ViewBag.Hotel = hotelDetails;
+            ViewBag.Hotels = hotels;
 
             return View();
         }
