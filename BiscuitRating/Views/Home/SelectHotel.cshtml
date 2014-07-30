@@ -1,15 +1,43 @@
 ﻿@{
     ViewBag.Title = "Rate your Hotel";
+   
 }
 
-<h2>@ViewBag.Message</h2>
+<h2>@ViewBag.Message </h2>
 
-<img src="~/Content/biscuits/1ChocolateDigestive.jpg" width ="200" height ="200" />
-<img src="~/Content/biscuits/2Cookie.jpg" width ="200" height ="200"/>
+<br />
+
+<!--
 <img src="~/Content/biscuits/3JammyBiscuit.jpg" width ="200" height ="200" />
 <img src="~/Content/biscuits/4Shortbread.jpg" width ="200" height ="200"/>
 <img src="~/Content/biscuits/5Bourbon.jpg" width ="200" height ="200"/>
 <img src="~/Content/biscuits/6FigRoll.jpg" width ="200" height ="200" />
-<img src="~/Content/biscuits/7PinkWafer.jpg" width ="200" height ="200"/>
+<img src="~/Content/biscuits/7PinkWafer.jpg" width ="200" height ="200"/> -->
+
+<table>
+    <tr>
+        <td>      
+            <img src="~/Content/biscuits/1ChocolateDigestive.jpg" width ="200" height ="200"/>
+        </td>       
+    </tr>
+    <tr>
+        <td>            
+             @Html.ActionLink("ChoclateDigestive", "RateHotel", new {Rating =1, HotelId = @ViewBag.Hotel.Id}) 
+       
+        </td>
+    </tr>
+     <tr>
+        <td>
+           <img src="~/Content/biscuits/2Cookie.jpg" width ="200" height ="200"/>
+        </td>       
+    </tr>
+    <tr>
+        <td>            
+             @Html.ActionLink("2Cookie", "RateHotel", new {Rating =1, HotelId = ViewBag.hotelId}) 
+       
+        </td>
+    </tr>
+   
+</table>
 
 @Html.ActionLink("3 Biscuits", "RateHotel")
