@@ -25,6 +25,11 @@ namespace BiscuitRating.Apis
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             var response = await client.GetAsync(hotelId.ToString(CultureInfo.InvariantCulture));
 
+            return await DecodeResponse(hotelId, response);
+        }
+
+        private async Task<HotelDetails> DecodeResponse(int hotelId, HttpResponseMessage response)
+        {
             dynamic result = await response.Content.ReadAsAsync<object>();
 
             Trace(result.ToString());
