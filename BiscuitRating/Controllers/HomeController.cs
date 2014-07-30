@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using BiscuitRating.Apis;
+using BiscuitRating.Models;
 
 namespace BiscuitRating.Controllers
 {
@@ -35,6 +36,16 @@ namespace BiscuitRating.Controllers
             ViewBag.Message = "Thankyou for reviewing " + hotelDetails.Name;
             ViewBag.Hotel = hotelDetails;
             ViewBag.Rating = rating;
+
+            var ratingRecord = new Table
+                {
+                    HotelId = hotelId,
+                    Rating = rating
+                };
+
+            var dbContext = new RatingsDBEntities();
+            dbContext.Tables.Add(ratingRecord);
+            dbContext.SaveChanges();
 
             return View();
         }
