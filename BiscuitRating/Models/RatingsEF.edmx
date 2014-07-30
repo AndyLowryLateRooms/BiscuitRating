@@ -4,11 +4,11 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="RatingsDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="RatingsDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="RatingsDBModelStoreContainer">
-          <EntitySet Name="Table" EntityType="RatingsDBModel.Store.Table" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Review" EntityType="RatingsDBModel.Store.Review" store:Type="Tables" Schema="dbo" />
         </EntityContainer>
-        <EntityType Name="Table">
+        <EntityType Name="Review">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -16,21 +16,20 @@
           <Property Name="HotelId" Type="int" Nullable="false" />
           <Property Name="Rating" Type="int" Nullable="false" />
         </EntityType>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="RatingsDBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="RatingsDBEntities" p1:LazyLoadingEnabled="true">
-          <EntitySet Name="Tables" EntityType="RatingsDBModel.Table" />
+          <EntitySet Name="Reviews" EntityType="RatingsDBModel.Review" />
         </EntityContainer>
-        <EntityType Name="Table">
+        <EntityType Name="Review">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="HotelId" Type="Int32" Nullable="false" />
-          <Property Name="Rating" Type="Int32" Nullable="false" />
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="HotelId" Nullable="false" />
+          <Property Type="Int32" Name="Rating" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -38,12 +37,12 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="RatingsDBModelStoreContainer" CdmEntityContainer="RatingsDBEntities">
-          <EntitySetMapping Name="Tables">
-            <EntityTypeMapping TypeName="RatingsDBModel.Table">
-              <MappingFragment StoreEntitySet="Table">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="HotelId" ColumnName="HotelId" />
+          <EntitySetMapping Name="Reviews">
+            <EntityTypeMapping TypeName="RatingsDBModel.Review">
+              <MappingFragment StoreEntitySet="Review">
                 <ScalarProperty Name="Rating" ColumnName="Rating" />
+                <ScalarProperty Name="HotelId" ColumnName="HotelId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

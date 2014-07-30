@@ -171,7 +171,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RatingsEF.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Table.cs">
+    <Compile Include="Models\Review.cs">
       <DependentUpon>RatingsEF.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

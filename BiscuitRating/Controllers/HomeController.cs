@@ -41,14 +41,14 @@ namespace BiscuitRating.Controllers
             ViewBag.Hotel = hotelDetails;
             ViewBag.Rating = rating;
 
-            var ratingRecord = new Table
+            var review = new Review
                 {
                     HotelId = hotelId,
                     Rating = rating
                 };
 
             var dbContext = new RatingsDBEntities();
-            dbContext.Tables.Add(ratingRecord);
+            dbContext.Reviews.Add(review);
             dbContext.SaveChanges();
 
             return View();

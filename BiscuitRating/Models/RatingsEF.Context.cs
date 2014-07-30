@@ -25,6 +25,6 @@ namespace BiscuitRating.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<Table> Tables { get; set; }
+        public DbSet<Review> Reviews { get; set; }
     }
 }

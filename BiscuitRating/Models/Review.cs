@@ -12,7 +12,7 @@ namespace BiscuitRating.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Table
+    public partial class Review
     {
         public int Id { get; set; }
         public int HotelId { get; set; }
