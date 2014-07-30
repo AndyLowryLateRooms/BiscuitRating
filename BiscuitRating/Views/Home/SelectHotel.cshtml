@@ -2,12 +2,18 @@
     ViewBag.Title = "Rate your Hotel";
    
 }
-<h2>@ViewBag.Message </h2>
+<h2 >@ViewBag.Message </h2>
 
-@Html.ActionLink("ChocolateDigestive", "RateHotel", new {Rating="1", HotelId=@ViewBag.Hotel.Id }, new { @class = "biscuitImage digestive" })
-@Html.ActionLink("Cookie", "RateHotel", new {Rating="2", HotelId=@ViewBag.Hotel.Id }, new { @class = "biscuitImage cookie" })
-@Html.ActionLink("JammyBiscuit", "RateHotel", new {Rating="3", HotelId=@ViewBag.Hotel.Id }, new { @class = "biscuitImage jammyBiscuit" })
-@Html.ActionLink("Shortbread", "RateHotel", new {Rating="4", HotelId=@ViewBag.Hotel.Id }, new { @class = "biscuitImage shortbread" })
-@Html.ActionLink("Bourbon", "RateHotel", new {Rating="5", HotelId=@ViewBag.Hotel.Id }, new { @class = "biscuitImage bourbon" })
-@Html.ActionLink("FigRoll", "RateHotel", new {Rating="6", HotelId=@ViewBag.Hotel.Id }, new { @class = "biscuitImage figRoll" })
-@Html.ActionLink("PinkWafer", "RateHotel", new {Rating="7", HotelId=@ViewBag.Hotel.Id }, new { @class = "biscuitImage pinkWafer" })
+@Html.ActionLink("1", "RateHotel", new {Rating="1", HotelId=@ViewBag.Hotel.Id }, new { @class = "biscuitImage image1" })
+<br />
+@Html.ActionLink("2", "RateHotel", new {Rating="2", HotelId=@ViewBag.Hotel.Id }, new { @class = "biscuitImage image2" })
+<br />
+@Html.ActionLink("3", "RateHotel", new {Rating="3", HotelId=@ViewBag.Hotel.Id }, new { @class = "biscuitImage image3" })
+<br />
+@Html.ActionLink("4", "RateHotel", new {Rating="4", HotelId=@ViewBag.Hotel.Id }, new { @class = "biscuitImage image4" })
+<br />
+@Html.ActionLink("5", "RateHotel", new {Rating="5", HotelId=@ViewBag.Hotel.Id }, new { @class = "biscuitImage image5" })
+<br />
+@Html.ActionLink("6", "RateHotel", new {Rating="6", HotelId=@ViewBag.Hotel.Id }, new { @class = "biscuitImage image6" })
+<br />
+@Html.ActionLink("7", "RateHotel", new {Rating="7", HotelId=@ViewBag.Hotel.Id }, new { @class = "biscuitImage image7" })

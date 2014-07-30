@@ -52,44 +52,44 @@
     margin-left: auto;
     margin-right: auto;
 }
-.digestive
+.image1
 {
-    background: url(/Content/biscuits/1ChocolateDigestive.jpg);
+    background: url(/Content/biscuits/1.jpg);
     background-size: 200px 200px;
 }
 
-.cookie
+.image2
 {
-    background: url(/Content/biscuits/2Cookie.jpg);
+    background: url(/Content/biscuits/2.jpg);
     background-size: 200px 200px;
 }
 
-.jammyBiscuit
+.image3
 {
-    background: url(/Content/biscuits/3JammyBiscuit.jpg);
+    background: url(/Content/biscuits/3.jpg);
     background-size: 200px 200px;
 }
 
-.shortbread
+.image4
 {
-    background: url(/Content/biscuits/4Shortbread.jpg);
+    background: url(/Content/biscuits/4.jpg);
     background-size: 200px 200px;
 }
 
-.bourbon
+.image5
 {
-    background: url(/Content/biscuits/5Bourbon.jpg);
+    background: url(/Content/biscuits/5.jpg);
     background-size: 200px 200px;
 }
 
-.figRoll
+.image6
 {
-    background: url(/Content/biscuits/6FigRoll.jpg);
+    background: url(/Content/biscuits/6.jpg);
     background-size: 200px 200px;
 }
 
-.pinkWafer
+.image7
 {
-    background: url(/Content/biscuits/7PinkWafer.jpg);
+    background: url(/Content/biscuits/7.jpg);
     background-size: 200px 200px;
 }
