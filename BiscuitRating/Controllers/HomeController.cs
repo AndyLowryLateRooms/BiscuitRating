@@ -21,7 +21,7 @@ namespace BiscuitRating.Controllers
             var hotelDetails = await new HotelDetailsRepository()
                 .FetchHotel(hotelId);
 
-            ViewBag.Message = "How are the biscuits at " + hotelDetails.Name + "?";
+            ViewBag.Message = "Give a rating to the Hotel " + hotelDetails.Name + "?";
             ViewBag.Hotel = hotelDetails;
 
             return View();
