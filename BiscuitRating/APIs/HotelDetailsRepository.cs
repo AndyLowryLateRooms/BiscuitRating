@@ -12,6 +12,7 @@ namespace BiscuitRating.Apis
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string PhotoUrl { get; set; }
     }
 
     public class HotelDetailsRepository
@@ -29,7 +30,8 @@ namespace BiscuitRating.Apis
             return new HotelDetails()
             {
                 Id = hotelId,
-                Name = result.name
+                Name = result.name,
+                PhotoUrl = result.images.gallery[0].url
             };
         }
     }

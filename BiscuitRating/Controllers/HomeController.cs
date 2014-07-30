@@ -27,9 +27,14 @@ namespace BiscuitRating.Controllers
             return View();
         }
 
-        public ActionResult RateHotel()
+        public async Task<ActionResult> RateHotel(int hotelId, int rating)
         {
-            ViewBag.Message = "Thanks for your review";
+            var hotelDetails = await new HotelDetailsRepository()
+                .FetchHotel(hotelId);
+
+            ViewBag.Message = "Thankyou for reviewing " + hotelDetails.Name;
+            ViewBag.Hotel = hotelDetails;
+            ViewBag.Rating = rating;
 
             return View();
         }
