@@ -27,8 +27,7 @@ namespace BiscuitRating.Apis
 
             dynamic result = await response.Content.ReadAsAsync<object>();
 
-
-            System.Diagnostics.Trace.WriteLine(result.ToString());
+            Trace(result.ToString());
 
             return new HotelDetails()
             {
@@ -36,6 +35,11 @@ namespace BiscuitRating.Apis
                 Name = result.name,
                 PhotoUrl = result.images.gallery[0].url
             };
+        }
+
+        private void Trace(string str)
+        {
+            System.Diagnostics.Trace.WriteLine(str, "HotelDetailRepo");
         }
     }
 }
